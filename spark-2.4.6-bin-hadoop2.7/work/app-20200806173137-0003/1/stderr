@@ -1,0 +1,132 @@
+Spark Executor Command: "C:\local\app\java\jdk1.8.0_181_windows\bin\java" "-cp" "C:\local\app\hadoop\spark\spark-2.4.6-bin-hadoop2.7\bin\..\conf\;C:\local\app\hadoop\spark\spark-2.4.6-bin-hadoop2.7\bin\..\jars\*" "-Xmx1024M" "-Dspark.driver.port=60085" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@LP-PC1EG9K2.corpau.wbcau.westpac.com.au:60085" "--executor-id" "1" "--hostname" "10.37.155.92" "--cores" "8" "--app-id" "app-20200806173137-0003" "--worker-url" "spark://Worker@10.37.155.92:54842"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/08/06 17:31:40 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 39140@LP-PC1EG9K2
+20/08/06 17:31:42 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/08/06 17:31:43 INFO SecurityManager: Changing view acls to: M051465
+20/08/06 17:31:43 INFO SecurityManager: Changing modify acls to: M051465
+20/08/06 17:31:43 INFO SecurityManager: Changing view acls groups to: 
+20/08/06 17:31:43 INFO SecurityManager: Changing modify acls groups to: 
+20/08/06 17:31:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(M051465); groups with view permissions: Set(); users  with modify permissions: Set(M051465); groups with modify permissions: Set()
+20/08/06 17:31:53 INFO TransportClientFactory: Successfully created connection to LP-PC1EG9K2.corpau.wbcau.westpac.com.au/10.37.155.92:60085 after 4358 ms (0 ms spent in bootstraps)
+20/08/06 17:31:53 INFO SecurityManager: Changing view acls to: M051465
+20/08/06 17:31:53 INFO SecurityManager: Changing modify acls to: M051465
+20/08/06 17:31:53 INFO SecurityManager: Changing view acls groups to: 
+20/08/06 17:31:53 INFO SecurityManager: Changing modify acls groups to: 
+20/08/06 17:31:53 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(M051465); groups with view permissions: Set(); users  with modify permissions: Set(M051465); groups with modify permissions: Set()
+20/08/06 17:31:53 INFO TransportClientFactory: Successfully created connection to LP-PC1EG9K2.corpau.wbcau.westpac.com.au/10.37.155.92:60085 after 6 ms (0 ms spent in bootstraps)
+20/08/06 17:31:53 INFO DiskBlockManager: Created local directory at C:\Users\m051465\AppData\Local\Temp\spark-287cbcf3-3b2e-4e4b-9f45-7118cd8b7762\executor-0840d5ea-18eb-4c61-a0ad-884d80a8831e\blockmgr-efd678ef-6131-4670-8ba6-6d2b33e5de34
+20/08/06 17:31:53 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/08/06 17:31:53 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@LP-PC1EG9K2.corpau.wbcau.westpac.com.au:60085
+20/08/06 17:31:53 INFO WorkerWatcher: Connecting to worker spark://Worker@10.37.155.92:54842
+20/08/06 17:31:53 INFO TransportClientFactory: Successfully created connection to /10.37.155.92:54842 after 11 ms (0 ms spent in bootstraps)
+20/08/06 17:31:53 INFO WorkerWatcher: Successfully connected to spark://Worker@10.37.155.92:54842
+20/08/06 17:31:53 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/08/06 17:31:53 INFO Executor: Starting executor ID 1 on host 10.37.155.92
+20/08/06 17:31:54 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 60294.
+20/08/06 17:31:54 INFO NettyBlockTransferService: Server created on 10.37.155.92:60294
+20/08/06 17:31:54 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/08/06 17:31:54 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, 10.37.155.92, 60294, None)
+20/08/06 17:31:54 ERROR CoarseGrainedExecutorBackend: Executor self-exiting due to : Unable to create executor due to Exception thrown in awaitResult: 
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:226)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:92)
+	at org.apache.spark.rpc.RpcEndpointRef.askSync(RpcEndpointRef.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.registerBlockManager(BlockManagerMaster.scala:64)
+	at org.apache.spark.storage.BlockManager.initialize(BlockManager.scala:248)
+	at org.apache.spark.executor.Executor.<init>(Executor.scala:118)
+	at org.apache.spark.executor.CoarseGrainedExecutorBackend$$anonfun$receive$1.applyOrElse(CoarseGrainedExecutorBackend.scala:83)
+	at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:117)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
+	at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:221)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: java.io.InvalidClassException: org.apache.spark.storage.BlockManagerId; local class incompatible: stream classdesc serialVersionUID = -3720498261147521051, local class serialVersionUID = 6155820641931972169
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:699)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1885)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1751)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2042)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1573)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2287)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2211)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2069)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1573)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:108)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anonfun$deserialize$1$$anonfun$apply$1.apply(NettyRpcEnv.scala:271)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.deserialize(NettyRpcEnv.scala:320)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anonfun$deserialize$1.apply(NettyRpcEnv.scala:270)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.deserialize(NettyRpcEnv.scala:269)
+	at org.apache.spark.rpc.netty.RequestMessage$.apply(NettyRpcEnv.scala:611)
+	at org.apache.spark.rpc.netty.NettyRpcHandler.internalReceive(NettyRpcEnv.scala:662)
+	at org.apache.spark.rpc.netty.NettyRpcHandler.receive(NettyRpcEnv.scala:647)
+	at org.apache.spark.network.server.TransportRequestHandler.processRpcRequest(TransportRequestHandler.java:187)
+	at org.apache.spark.network.server.TransportRequestHandler.handle(TransportRequestHandler.java:111)
+	at org.apache.spark.network.server.TransportChannelHandler.channelRead(TransportChannelHandler.java:118)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:85)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:138)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
+	at java.lang.Thread.run(Thread.java:748)
+
+	at org.apache.spark.network.client.TransportResponseHandler.handle(TransportResponseHandler.java:207)
+	at org.apache.spark.network.server.TransportChannelHandler.channelRead(TransportChannelHandler.java:120)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:85)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+20/08/06 17:31:54 INFO DiskBlockManager: Shutdown hook called
+20/08/06 17:31:55 INFO ShutdownHookManager: Shutdown hook called

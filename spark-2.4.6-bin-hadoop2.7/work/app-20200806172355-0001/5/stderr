@@ -1,0 +1,3 @@
+Spark Executor Command: "C:\local\app\java\jdk1.8.0_181_windows\bin\java" "-cp" "C:\local\app\hadoop\spark\spark-2.4.6-bin-hadoop2.7\bin\..\conf\;C:\local\app\hadoop\spark\spark-2.4.6-bin-hadoop2.7\bin\..\jars\*" "-Xmx1024M" "-Dspark.driver.port=59099" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@LP-PC1EG9K2.corpau.wbcau.westpac.com.au:59099" "--executor-id" "5" "--hostname" "10.37.155.92" "--cores" "8" "--app-id" "app-20200806172355-0001" "--worker-url" "spark://Worker@10.37.155.92:58732"
+========================================
+

@@ -1,0 +1,461 @@
+Spark Executor Command: "C:\local\app\java\jdk1.8.0_181_windows\bin\java" "-cp" "C:\local\app\hadoop\spark\spark-2.4.6-bin-hadoop2.7\bin\..\conf\;C:\local\app\hadoop\spark\spark-2.4.6-bin-hadoop2.7\jars\*" "-Xmx1024M" "-Dspark.driver.port=62720" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@LP-PC1EG9K2.corpau.wbcau.westpac.com.au:62720" "--executor-id" "0" "--hostname" "10.37.12.211" "--cores" "8" "--app-id" "app-20200918144118-0000" "--worker-url" "spark://Worker@10.37.12.211:62648"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/09/18 14:41:24 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 490820@LP-PC1EG9K2
+20/09/18 14:41:25 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/09/18 14:41:26 INFO SecurityManager: Changing view acls to: M051465
+20/09/18 14:41:26 INFO SecurityManager: Changing modify acls to: M051465
+20/09/18 14:41:26 INFO SecurityManager: Changing view acls groups to: 
+20/09/18 14:41:26 INFO SecurityManager: Changing modify acls groups to: 
+20/09/18 14:41:26 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(M051465); groups with view permissions: Set(); users  with modify permissions: Set(M051465); groups with modify permissions: Set()
+20/09/18 14:41:44 INFO TransportClientFactory: Successfully created connection to LP-PC1EG9K2.corpau.wbcau.westpac.com.au/10.37.12.211:62720 after 11277 ms (0 ms spent in bootstraps)
+20/09/18 14:41:44 INFO SecurityManager: Changing view acls to: M051465
+20/09/18 14:41:44 INFO SecurityManager: Changing modify acls to: M051465
+20/09/18 14:41:44 INFO SecurityManager: Changing view acls groups to: 
+20/09/18 14:41:44 INFO SecurityManager: Changing modify acls groups to: 
+20/09/18 14:41:44 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(M051465); groups with view permissions: Set(); users  with modify permissions: Set(M051465); groups with modify permissions: Set()
+20/09/18 14:41:44 INFO TransportClientFactory: Successfully created connection to LP-PC1EG9K2.corpau.wbcau.westpac.com.au/10.37.12.211:62720 after 16 ms (0 ms spent in bootstraps)
+20/09/18 14:41:44 INFO DiskBlockManager: Created local directory at C:\Users\m051465\AppData\Local\Temp\spark-32ff8c92-d88d-40bb-b060-73b9eb8307a1\executor-41e24808-6b70-45c0-bca0-739d4fbbadf4\blockmgr-0a9e5b91-cf0b-47e5-9bd3-17b890d75796
+20/09/18 14:41:44 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/09/18 14:41:45 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@LP-PC1EG9K2.corpau.wbcau.westpac.com.au:62720
+20/09/18 14:41:45 INFO WorkerWatcher: Connecting to worker spark://Worker@10.37.12.211:62648
+20/09/18 14:41:45 INFO TransportClientFactory: Successfully created connection to /10.37.12.211:62648 after 26 ms (0 ms spent in bootstraps)
+20/09/18 14:41:45 INFO WorkerWatcher: Successfully connected to spark://Worker@10.37.12.211:62648
+20/09/18 14:41:45 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/09/18 14:41:45 INFO Executor: Starting executor ID 0 on host 10.37.12.211
+20/09/18 14:41:45 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 63042.
+20/09/18 14:41:45 INFO NettyBlockTransferService: Server created on 10.37.12.211:63042
+20/09/18 14:41:45 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/09/18 14:41:45 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(0, 10.37.12.211, 63042, None)
+20/09/18 14:41:45 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(0, 10.37.12.211, 63042, None)
+20/09/18 14:41:45 INFO BlockManager: Initialized BlockManager: BlockManagerId(0, 10.37.12.211, 63042, None)
+20/09/18 14:42:11 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+20/09/18 14:42:11 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/09/18 14:42:12 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/09/18 14:42:12 INFO TransportClientFactory: Successfully created connection to LP-PC1EG9K2.corpau.wbcau.westpac.com.au/10.37.12.211:62772 after 3 ms (0 ms spent in bootstraps)
+20/09/18 14:42:12 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.6 KB, free 366.3 MB)
+20/09/18 14:42:12 INFO TorrentBroadcast: Reading broadcast variable 1 took 144 ms
+20/09/18 14:42:12 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 8.9 KB, free 366.3 MB)
+20/09/18 14:42:13 INFO CodeGenerator: Code generated in 376.1358 ms
+20/09/18 14:42:13 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 0-96482938, partition values: [empty row]
+20/09/18 14:42:13 INFO CodeGenerator: Code generated in 19.9141 ms
+20/09/18 14:42:13 INFO TorrentBroadcast: Started reading broadcast variable 0
+20/09/18 14:42:13 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.3 MB)
+20/09/18 14:42:13 INFO TorrentBroadcast: Reading broadcast variable 0 took 15 ms
+20/09/18 14:42:13 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 327.3 KB, free 365.9 MB)
+20/09/18 14:42:13 INFO LineRecordReader: Found UTF-8 BOM and skipped it
+20/09/18 14:42:13 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2141 bytes result sent to driver
+20/09/18 14:42:16 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+20/09/18 14:42:16 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+20/09/18 14:42:16 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+20/09/18 14:42:16 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+20/09/18 14:42:16 INFO CoarseGrainedExecutorBackend: Got assigned task 4
+20/09/18 14:42:16 INFO CoarseGrainedExecutorBackend: Got assigned task 5
+20/09/18 14:42:16 INFO CoarseGrainedExecutorBackend: Got assigned task 6
+20/09/18 14:42:16 INFO CoarseGrainedExecutorBackend: Got assigned task 7
+20/09/18 14:42:16 INFO CoarseGrainedExecutorBackend: Got assigned task 8
+20/09/18 14:42:16 INFO Executor: Running task 3.0 in stage 1.0 (TID 4)
+20/09/18 14:42:16 INFO Executor: Running task 6.0 in stage 1.0 (TID 7)
+20/09/18 14:42:16 INFO Executor: Running task 1.0 in stage 1.0 (TID 2)
+20/09/18 14:42:16 INFO Executor: Running task 7.0 in stage 1.0 (TID 8)
+20/09/18 14:42:16 INFO Executor: Running task 5.0 in stage 1.0 (TID 6)
+20/09/18 14:42:16 INFO Executor: Running task 2.0 in stage 1.0 (TID 3)
+20/09/18 14:42:16 INFO Executor: Running task 4.0 in stage 1.0 (TID 5)
+20/09/18 14:42:16 INFO TorrentBroadcast: Started reading broadcast variable 4
+20/09/18 14:42:16 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 18.7 KB, free 366.3 MB)
+20/09/18 14:42:16 INFO TorrentBroadcast: Reading broadcast variable 4 took 22 ms
+20/09/18 14:42:16 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 56.2 KB, free 366.2 MB)
+20/09/18 14:42:16 INFO CodeGenerator: Code generated in 44.7201 ms
+20/09/18 14:42:17 INFO CodeGenerator: Code generated in 216.5879 ms
+20/09/18 14:42:17 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 96482938-192965876, partition values: [empty row]
+20/09/18 14:42:17 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 289448814-385931752, partition values: [empty row]
+20/09/18 14:42:17 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 385931752-482414690, partition values: [empty row]
+20/09/18 14:42:17 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 675380566-767669206, partition values: [empty row]
+20/09/18 14:42:17 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 482414690-578897628, partition values: [empty row]
+20/09/18 14:42:17 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 192965876-289448814, partition values: [empty row]
+20/09/18 14:42:17 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 578897628-675380566, partition values: [empty row]
+20/09/18 14:42:17 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 0-96482938, partition values: [empty row]
+20/09/18 14:42:17 INFO CodeGenerator: Code generated in 166.8009 ms
+20/09/18 14:42:17 INFO TorrentBroadcast: Started reading broadcast variable 3
+20/09/18 14:42:17 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.2 MB)
+20/09/18 14:42:17 INFO TorrentBroadcast: Reading broadcast variable 3 took 30 ms
+20/09/18 14:42:17 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 327.3 KB, free 365.9 MB)
+20/09/18 14:42:17 INFO LineRecordReader: Found UTF-8 BOM and skipped it
+20/09/18 14:42:32 INFO Executor: Finished task 1.0 in stage 1.0 (TID 2). 1662 bytes result sent to driver
+20/09/18 14:42:32 INFO Executor: Finished task 6.0 in stage 1.0 (TID 7). 1619 bytes result sent to driver
+20/09/18 14:42:32 INFO Executor: Finished task 5.0 in stage 1.0 (TID 6). 1619 bytes result sent to driver
+20/09/18 14:42:32 INFO Executor: Finished task 2.0 in stage 1.0 (TID 3). 1619 bytes result sent to driver
+20/09/18 14:42:33 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1619 bytes result sent to driver
+20/09/18 14:42:33 INFO Executor: Finished task 7.0 in stage 1.0 (TID 8). 1662 bytes result sent to driver
+20/09/18 14:42:33 INFO Executor: Finished task 4.0 in stage 1.0 (TID 5). 1662 bytes result sent to driver
+20/09/18 14:42:33 INFO Executor: Finished task 3.0 in stage 1.0 (TID 4). 1662 bytes result sent to driver
+20/09/18 14:42:33 INFO CoarseGrainedExecutorBackend: Got assigned task 9
+20/09/18 14:42:33 INFO Executor: Running task 0.0 in stage 2.0 (TID 9)
+20/09/18 14:42:33 INFO MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+20/09/18 14:42:33 INFO TorrentBroadcast: Started reading broadcast variable 5
+20/09/18 14:42:33 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 18.6 KB, free 365.9 MB)
+20/09/18 14:42:33 INFO TorrentBroadcast: Reading broadcast variable 5 took 52 ms
+20/09/18 14:42:33 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 60.7 KB, free 365.8 MB)
+20/09/18 14:42:33 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+20/09/18 14:42:33 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@LP-PC1EG9K2.corpau.wbcau.westpac.com.au:62720)
+20/09/18 14:42:33 INFO MapOutputTrackerWorker: Got the output locations
+20/09/18 14:42:33 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks including 8 local blocks and 0 remote blocks
+20/09/18 14:42:33 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 19 ms
+20/09/18 14:42:33 INFO CodeGenerator: Code generated in 259.8844 ms
+20/09/18 14:42:33 INFO Executor: Finished task 0.0 in stage 2.0 (TID 9). 2690 bytes result sent to driver
+20/09/18 14:42:35 INFO CoarseGrainedExecutorBackend: Got assigned task 10
+20/09/18 14:42:35 INFO Executor: Running task 0.0 in stage 3.0 (TID 10)
+20/09/18 14:42:35 INFO TorrentBroadcast: Started reading broadcast variable 7
+20/09/18 14:42:35 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 4.6 KB, free 366.2 MB)
+20/09/18 14:42:35 INFO TorrentBroadcast: Reading broadcast variable 7 took 144 ms
+20/09/18 14:42:35 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 8.9 KB, free 366.2 MB)
+20/09/18 14:42:35 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 0-96482938, partition values: [empty row]
+20/09/18 14:42:35 INFO TorrentBroadcast: Started reading broadcast variable 6
+20/09/18 14:42:35 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.2 MB)
+20/09/18 14:42:35 INFO TorrentBroadcast: Reading broadcast variable 6 took 31 ms
+20/09/18 14:42:35 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 327.3 KB, free 365.9 MB)
+20/09/18 14:42:35 INFO LineRecordReader: Found UTF-8 BOM and skipped it
+20/09/18 14:42:35 INFO Executor: Finished task 0.0 in stage 3.0 (TID 10). 2098 bytes result sent to driver
+20/09/18 14:42:36 INFO CoarseGrainedExecutorBackend: Got assigned task 11
+20/09/18 14:42:36 INFO CoarseGrainedExecutorBackend: Got assigned task 12
+20/09/18 14:42:36 INFO CoarseGrainedExecutorBackend: Got assigned task 13
+20/09/18 14:42:36 INFO CoarseGrainedExecutorBackend: Got assigned task 14
+20/09/18 14:42:36 INFO CoarseGrainedExecutorBackend: Got assigned task 15
+20/09/18 14:42:36 INFO CoarseGrainedExecutorBackend: Got assigned task 16
+20/09/18 14:42:36 INFO Executor: Running task 4.0 in stage 4.0 (TID 15)
+20/09/18 14:42:36 INFO CoarseGrainedExecutorBackend: Got assigned task 17
+20/09/18 14:42:36 INFO CoarseGrainedExecutorBackend: Got assigned task 18
+20/09/18 14:42:36 INFO Executor: Running task 2.0 in stage 4.0 (TID 13)
+20/09/18 14:42:36 INFO Executor: Running task 6.0 in stage 4.0 (TID 17)
+20/09/18 14:42:36 INFO Executor: Running task 1.0 in stage 4.0 (TID 12)
+20/09/18 14:42:36 INFO Executor: Running task 0.0 in stage 4.0 (TID 11)
+20/09/18 14:42:36 INFO Executor: Running task 7.0 in stage 4.0 (TID 18)
+20/09/18 14:42:36 INFO TorrentBroadcast: Started reading broadcast variable 10
+20/09/18 14:42:36 INFO Executor: Running task 3.0 in stage 4.0 (TID 14)
+20/09/18 14:42:36 INFO Executor: Running task 5.0 in stage 4.0 (TID 16)
+20/09/18 14:42:36 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 18.7 KB, free 365.9 MB)
+20/09/18 14:42:36 INFO TorrentBroadcast: Reading broadcast variable 10 took 18 ms
+20/09/18 14:42:36 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 56.2 KB, free 365.9 MB)
+20/09/18 14:42:36 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 385931752-482414690, partition values: [empty row]
+20/09/18 14:42:36 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 289448814-385931752, partition values: [empty row]
+20/09/18 14:42:36 INFO TorrentBroadcast: Started reading broadcast variable 9
+20/09/18 14:42:36 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 482414690-578897628, partition values: [empty row]
+20/09/18 14:42:36 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 96482938-192965876, partition values: [empty row]
+20/09/18 14:42:36 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 0-96482938, partition values: [empty row]
+20/09/18 14:42:36 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 675380566-767669206, partition values: [empty row]
+20/09/18 14:42:36 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 23.3 KB, free 365.8 MB)
+20/09/18 14:42:36 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 578897628-675380566, partition values: [empty row]
+20/09/18 14:42:36 INFO TorrentBroadcast: Reading broadcast variable 9 took 64 ms
+20/09/18 14:42:36 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 192965876-289448814, partition values: [empty row]
+20/09/18 14:42:36 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 327.3 KB, free 365.5 MB)
+20/09/18 14:42:36 INFO LineRecordReader: Found UTF-8 BOM and skipped it
+20/09/18 14:42:50 INFO Executor: Finished task 3.0 in stage 4.0 (TID 14). 1576 bytes result sent to driver
+20/09/18 14:42:50 INFO Executor: Finished task 0.0 in stage 4.0 (TID 11). 1619 bytes result sent to driver
+20/09/18 14:42:50 INFO Executor: Finished task 2.0 in stage 4.0 (TID 13). 1662 bytes result sent to driver
+20/09/18 14:42:50 INFO Executor: Finished task 1.0 in stage 4.0 (TID 12). 1619 bytes result sent to driver
+20/09/18 14:42:52 INFO Executor: Finished task 7.0 in stage 4.0 (TID 18). 1576 bytes result sent to driver
+20/09/18 14:42:52 INFO Executor: Finished task 4.0 in stage 4.0 (TID 15). 1619 bytes result sent to driver
+20/09/18 14:42:52 INFO Executor: Finished task 5.0 in stage 4.0 (TID 16). 1576 bytes result sent to driver
+20/09/18 14:42:52 INFO Executor: Finished task 6.0 in stage 4.0 (TID 17). 1576 bytes result sent to driver
+20/09/18 14:42:52 INFO CoarseGrainedExecutorBackend: Got assigned task 19
+20/09/18 14:42:52 INFO Executor: Running task 0.0 in stage 5.0 (TID 19)
+20/09/18 14:42:52 INFO MapOutputTrackerWorker: Updating epoch to 2 and clearing cache
+20/09/18 14:42:52 INFO TorrentBroadcast: Started reading broadcast variable 11
+20/09/18 14:42:52 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 18.6 KB, free 365.5 MB)
+20/09/18 14:42:52 INFO TorrentBroadcast: Reading broadcast variable 11 took 12 ms
+20/09/18 14:42:52 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 60.7 KB, free 365.5 MB)
+20/09/18 14:42:52 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+20/09/18 14:42:52 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@LP-PC1EG9K2.corpau.wbcau.westpac.com.au:62720)
+20/09/18 14:42:52 INFO MapOutputTrackerWorker: Got the output locations
+20/09/18 14:42:52 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks including 8 local blocks and 0 remote blocks
+20/09/18 14:42:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/09/18 14:42:53 INFO Executor: Finished task 0.0 in stage 5.0 (TID 19). 2733 bytes result sent to driver
+20/09/18 14:42:54 INFO CoarseGrainedExecutorBackend: Got assigned task 20
+20/09/18 14:42:54 INFO CoarseGrainedExecutorBackend: Got assigned task 21
+20/09/18 14:42:54 INFO CoarseGrainedExecutorBackend: Got assigned task 22
+20/09/18 14:42:54 INFO CoarseGrainedExecutorBackend: Got assigned task 23
+20/09/18 14:42:54 INFO CoarseGrainedExecutorBackend: Got assigned task 24
+20/09/18 14:42:54 INFO CoarseGrainedExecutorBackend: Got assigned task 25
+20/09/18 14:42:54 INFO Executor: Running task 4.0 in stage 6.0 (TID 24)
+20/09/18 14:42:54 INFO Executor: Running task 5.0 in stage 6.0 (TID 25)
+20/09/18 14:42:54 INFO TorrentBroadcast: Started reading broadcast variable 13
+20/09/18 14:42:54 INFO Executor: Running task 0.0 in stage 6.0 (TID 20)
+20/09/18 14:42:54 INFO Executor: Running task 1.0 in stage 6.0 (TID 21)
+20/09/18 14:42:54 INFO Executor: Running task 2.0 in stage 6.0 (TID 22)
+20/09/18 14:42:54 INFO Executor: Running task 3.0 in stage 6.0 (TID 23)
+20/09/18 14:42:54 INFO CoarseGrainedExecutorBackend: Got assigned task 26
+20/09/18 14:42:54 INFO Executor: Running task 6.0 in stage 6.0 (TID 26)
+20/09/18 14:42:54 INFO CoarseGrainedExecutorBackend: Got assigned task 27
+20/09/18 14:42:54 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 18.7 KB, free 365.4 MB)
+20/09/18 14:42:54 INFO Executor: Running task 7.0 in stage 6.0 (TID 27)
+20/09/18 14:42:54 INFO TorrentBroadcast: Reading broadcast variable 13 took 104 ms
+20/09/18 14:42:54 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 56.2 KB, free 365.4 MB)
+20/09/18 14:42:54 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 482414690-578897628, partition values: [empty row]
+20/09/18 14:42:54 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 675380566-767669206, partition values: [empty row]
+20/09/18 14:42:54 INFO TorrentBroadcast: Started reading broadcast variable 12
+20/09/18 14:42:54 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 96482938-192965876, partition values: [empty row]
+20/09/18 14:42:54 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 0-96482938, partition values: [empty row]
+20/09/18 14:42:54 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 192965876-289448814, partition values: [empty row]
+20/09/18 14:42:54 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 23.3 KB, free 365.4 MB)
+20/09/18 14:42:54 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 578897628-675380566, partition values: [empty row]
+20/09/18 14:42:54 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 289448814-385931752, partition values: [empty row]
+20/09/18 14:42:54 INFO TorrentBroadcast: Reading broadcast variable 12 took 80 ms
+20/09/18 14:42:54 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 327.3 KB, free 365.0 MB)
+20/09/18 14:42:54 INFO FileScanRDD: Reading File path: file:///C:/local/git/python_datamodel_transform/transforms-python/src/mainproject/test_files/mapping/broadway_oms/Broadway_OMS_Combined_large.csv, range: 385931752-482414690, partition values: [empty row]
+20/09/18 14:42:54 INFO LineRecordReader: Found UTF-8 BOM and skipped it
+20/09/18 14:43:08 INFO Executor: Finished task 3.0 in stage 6.0 (TID 23). 1576 bytes result sent to driver
+20/09/18 14:43:08 INFO Executor: Finished task 0.0 in stage 6.0 (TID 20). 1619 bytes result sent to driver
+20/09/18 14:43:08 INFO Executor: Finished task 2.0 in stage 6.0 (TID 22). 1576 bytes result sent to driver
+20/09/18 14:43:08 INFO Executor: Finished task 1.0 in stage 6.0 (TID 21). 1576 bytes result sent to driver
+20/09/18 14:43:09 INFO Executor: Finished task 4.0 in stage 6.0 (TID 24). 1576 bytes result sent to driver
+20/09/18 14:43:09 INFO Executor: Finished task 5.0 in stage 6.0 (TID 25). 1619 bytes result sent to driver
+20/09/18 14:43:09 INFO Executor: Finished task 6.0 in stage 6.0 (TID 26). 1576 bytes result sent to driver
+20/09/18 14:43:09 INFO Executor: Finished task 7.0 in stage 6.0 (TID 27). 1576 bytes result sent to driver
+20/09/18 14:43:09 INFO CoarseGrainedExecutorBackend: Got assigned task 28
+20/09/18 14:43:09 INFO Executor: Running task 0.0 in stage 7.0 (TID 28)
+20/09/18 14:43:09 INFO MapOutputTrackerWorker: Updating epoch to 3 and clearing cache
+20/09/18 14:43:09 INFO TorrentBroadcast: Started reading broadcast variable 14
+20/09/18 14:43:09 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 33.6 KB, free 365.9 MB)
+20/09/18 14:43:09 INFO TorrentBroadcast: Reading broadcast variable 14 took 12 ms
+20/09/18 14:43:09 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 87.7 KB, free 365.8 MB)
+20/09/18 14:43:09 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 2, fetching them
+20/09/18 14:43:09 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@LP-PC1EG9K2.corpau.wbcau.westpac.com.au:62720)
+20/09/18 14:43:09 INFO MapOutputTrackerWorker: Got the output locations
+20/09/18 14:43:09 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks including 8 local blocks and 0 remote blocks
+20/09/18 14:43:09 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/09/18 14:43:09 INFO MemoryStore: Block rdd_47_0 stored as values in memory (estimated size 16.2 KB, free 365.8 MB)
+20/09/18 14:43:10 INFO CodeGenerator: Code generated in 17.0052 ms
+20/09/18 14:43:10 INFO CodeGenerator: Code generated in 62.949 ms
+20/09/18 14:43:10 INFO CodeGenerator: Code generated in 16.7003 ms
+20/09/18 14:43:10 INFO Executor: Finished task 0.0 in stage 7.0 (TID 28). 2439 bytes result sent to driver
+20/09/18 14:43:10 INFO CoarseGrainedExecutorBackend: Got assigned task 29
+20/09/18 14:43:10 INFO Executor: Running task 0.0 in stage 9.0 (TID 29)
+20/09/18 14:43:10 INFO TorrentBroadcast: Started reading broadcast variable 15
+20/09/18 14:43:10 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 58.5 KB, free 365.7 MB)
+20/09/18 14:43:10 INFO TorrentBroadcast: Reading broadcast variable 15 took 11 ms
+20/09/18 14:43:10 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 169.4 KB, free 365.5 MB)
+20/09/18 14:43:10 INFO BlockManager: Found block rdd_47_0 locally
+20/09/18 14:43:11 INFO CodeGenerator: Code generated in 182.8181 ms
+20/09/18 14:43:11 INFO CodeGenerator: Code generated in 232.1123 ms
+20/09/18 14:43:11 INFO MemoryStore: Block rdd_57_0 stored as values in memory (estimated size 16.5 KB, free 365.5 MB)
+20/09/18 14:43:11 INFO Executor: Finished task 0.0 in stage 9.0 (TID 29). 2467 bytes result sent to driver
+20/09/18 14:43:13 INFO CoarseGrainedExecutorBackend: Got assigned task 30
+20/09/18 14:43:13 INFO Executor: Running task 0.0 in stage 11.0 (TID 30)
+20/09/18 14:43:13 INFO TorrentBroadcast: Started reading broadcast variable 16
+20/09/18 14:43:13 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 103.4 KB, free 365.8 MB)
+20/09/18 14:43:13 INFO TorrentBroadcast: Reading broadcast variable 16 took 16 ms
+20/09/18 14:43:13 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 292.4 KB, free 365.5 MB)
+20/09/18 14:43:13 INFO BlockManager: Found block rdd_57_0 locally
+20/09/18 14:43:13 INFO CodeGenerator: Code generated in 43.8847 ms
+20/09/18 14:43:13 INFO CodeGenerator: Code generated in 49.6977 ms
+20/09/18 14:43:15 INFO CodeGenerator: Code generated in 408.596 ms
+20/09/18 14:43:16 INFO CodeGenerator: Code generated in 386.1623 ms
+20/09/18 14:43:16 WARN BlockManager: Putting block rdd_69_0 failed due to exception java.net.SocketException: Software caused connection abort: recv failed.
+20/09/18 14:43:16 WARN BlockManager: Block rdd_69_0 could not be removed as it was not found on disk or in memory
+20/09/18 14:43:16 ERROR Executor: Exception in task 0.0 in stage 11.0 (TID 30)
+java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:71)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:64)
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:410)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anonfun$1$$anon$1.hasNext(InMemoryRelation.scala:125)
+	at org.apache.spark.storage.memory.MemoryStore.putIterator(MemoryStore.scala:221)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:299)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1165)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:1091)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:882)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:357)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:308)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+20/09/18 14:43:16 INFO CoarseGrainedExecutorBackend: Got assigned task 31
+20/09/18 14:43:16 INFO Executor: Running task 0.1 in stage 11.0 (TID 31)
+20/09/18 14:43:16 INFO BlockManager: Found block rdd_57_0 locally
+20/09/18 14:43:19 WARN BlockManager: Putting block rdd_69_0 failed due to exception java.net.SocketException: Software caused connection abort: recv failed.
+20/09/18 14:43:19 WARN BlockManager: Block rdd_69_0 could not be removed as it was not found on disk or in memory
+20/09/18 14:43:19 ERROR Executor: Exception in task 0.1 in stage 11.0 (TID 31)
+java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:71)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:64)
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:410)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anonfun$1$$anon$1.hasNext(InMemoryRelation.scala:125)
+	at org.apache.spark.storage.memory.MemoryStore.putIterator(MemoryStore.scala:221)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:299)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1165)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:1091)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:882)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:357)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:308)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+20/09/18 14:43:19 INFO CoarseGrainedExecutorBackend: Got assigned task 32
+20/09/18 14:43:19 INFO Executor: Running task 0.2 in stage 11.0 (TID 32)
+20/09/18 14:43:19 INFO BlockManager: Found block rdd_57_0 locally
+20/09/18 14:43:21 WARN BlockManager: Putting block rdd_69_0 failed due to exception java.net.SocketException: Software caused connection abort: recv failed.
+20/09/18 14:43:21 WARN BlockManager: Block rdd_69_0 could not be removed as it was not found on disk or in memory
+20/09/18 14:43:21 ERROR Executor: Exception in task 0.2 in stage 11.0 (TID 32)
+java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:71)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:64)
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:410)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anonfun$1$$anon$1.hasNext(InMemoryRelation.scala:125)
+	at org.apache.spark.storage.memory.MemoryStore.putIterator(MemoryStore.scala:221)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:299)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1165)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:1091)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:882)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:357)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:308)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+20/09/18 14:43:21 INFO CoarseGrainedExecutorBackend: Got assigned task 33
+20/09/18 14:43:21 INFO Executor: Running task 0.3 in stage 11.0 (TID 33)
+20/09/18 14:43:21 INFO BlockManager: Found block rdd_57_0 locally
+20/09/18 14:43:24 WARN BlockManager: Putting block rdd_69_0 failed due to exception java.net.SocketException: Connection reset.
+20/09/18 14:43:24 WARN BlockManager: Block rdd_69_0 could not be removed as it was not found on disk or in memory
+20/09/18 14:43:24 ERROR Executor: Exception in task 0.3 in stage 11.0 (TID 33)
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:71)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.read(PythonUDFRunner.scala:64)
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:410)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anonfun$1$$anon$1.hasNext(InMemoryRelation.scala:125)
+	at org.apache.spark.storage.memory.MemoryStore.putIterator(MemoryStore.scala:221)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:299)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1165)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:1091)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:882)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:357)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:308)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+20/09/18 14:43:25 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown

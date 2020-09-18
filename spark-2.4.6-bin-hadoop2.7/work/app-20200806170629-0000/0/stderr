@@ -1,0 +1,33 @@
+Spark Executor Command: "C:\local\app\java\jdk1.8.0_181_windows\bin\java" "-cp" "C:\local\app\hadoop\spark\spark-2.4.6-bin-hadoop2.7\bin\..\conf\;C:\local\app\hadoop\spark\spark-2.4.6-bin-hadoop2.7\bin\..\jars\*" "-Xmx1024M" "-Dspark.driver.port=54897" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@LP-PC1EG9K2.corpau.wbcau.westpac.com.au:54897" "--executor-id" "0" "--hostname" "10.37.155.92" "--cores" "8" "--app-id" "app-20200806170629-0000" "--worker-url" "spark://Worker@10.37.155.92:54842"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/08/06 17:06:32 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 34924@LP-PC1EG9K2
+20/08/06 17:06:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/08/06 17:06:34 INFO SecurityManager: Changing view acls to: M051465
+20/08/06 17:06:34 INFO SecurityManager: Changing modify acls to: M051465
+20/08/06 17:06:34 INFO SecurityManager: Changing view acls groups to: 
+20/08/06 17:06:34 INFO SecurityManager: Changing modify acls groups to: 
+20/08/06 17:06:34 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(M051465); groups with view permissions: Set(); users  with modify permissions: Set(M051465); groups with modify permissions: Set()
+20/08/06 17:06:39 INFO TransportClientFactory: Successfully created connection to LP-PC1EG9K2.corpau.wbcau.westpac.com.au/10.37.155.92:54897 after 2603 ms (0 ms spent in bootstraps)
+20/08/06 17:06:39 INFO SecurityManager: Changing view acls to: M051465
+20/08/06 17:06:39 INFO SecurityManager: Changing modify acls to: M051465
+20/08/06 17:06:39 INFO SecurityManager: Changing view acls groups to: 
+20/08/06 17:06:39 INFO SecurityManager: Changing modify acls groups to: 
+20/08/06 17:06:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(M051465); groups with view permissions: Set(); users  with modify permissions: Set(M051465); groups with modify permissions: Set()
+20/08/06 17:06:39 INFO TransportClientFactory: Successfully created connection to LP-PC1EG9K2.corpau.wbcau.westpac.com.au/10.37.155.92:54897 after 4 ms (0 ms spent in bootstraps)
+20/08/06 17:06:39 INFO DiskBlockManager: Created local directory at C:\Users\m051465\AppData\Local\Temp\spark-287cbcf3-3b2e-4e4b-9f45-7118cd8b7762\executor-e3cf5e97-bd69-400f-9aef-f35759a320d6\blockmgr-b214a52d-4c81-4c14-8203-cf772514891f
+20/08/06 17:06:39 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/08/06 17:06:40 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@LP-PC1EG9K2.corpau.wbcau.westpac.com.au:54897
+20/08/06 17:06:40 INFO WorkerWatcher: Connecting to worker spark://Worker@10.37.155.92:54842
+20/08/06 17:06:40 INFO TransportClientFactory: Successfully created connection to /10.37.155.92:54842 after 6 ms (0 ms spent in bootstraps)
+20/08/06 17:06:40 INFO WorkerWatcher: Successfully connected to spark://Worker@10.37.155.92:54842
+20/08/06 17:06:40 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/08/06 17:06:40 INFO Executor: Starting executor ID 0 on host 10.37.155.92
+20/08/06 17:06:40 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 56192.
+20/08/06 17:06:40 INFO NettyBlockTransferService: Server created on 10.37.155.92:56192
+20/08/06 17:06:40 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/08/06 17:06:40 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(0, 10.37.155.92, 56192, None)
+20/08/06 17:06:40 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(0, 10.37.155.92, 56192, None)
+20/08/06 17:06:40 INFO BlockManager: Initialized BlockManager: BlockManagerId(0, 10.37.155.92, 56192, None)
+20/08/06 17:06:40 INFO Executor: Using REPL class URI: spark://LP-PC1EG9K2.corpau.wbcau.westpac.com.au:54897/classes
