@@ -10,3 +10,12 @@ HADOOP_HOME=<your local hadoop-ver folder>
 PATH=%PATH%;%HADOOP_HOME%\bin
 ```
 then you'll pass the "no native library" and "access0" error
+
+# Windows setup
+
+Setup path variables
+```
+setx HADOOP_HOME PATH
+setx SPARK_HOME PATH
+setx JAVA_HOME PATH
+```
