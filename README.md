@@ -1,21 +1,31 @@
-# winutils
+# Running a localized Hadoop environment with a Python pipeline
 winutils.exe hadoop.dll and hdfs.dll binaries for hadoop on windows
 
-## how to use
+## Instructions
 
-place a copy of hadoop-ver folder on your local drive
-set environment vars:
-```
-HADOOP_HOME=<your local hadoop-ver folder>
-PATH=%PATH%;%HADOOP_HOME%\bin
-```
-then you'll pass the "no native library" and "access0" error
+### 1. Base installation packages
+
+1. Python runtime environment
+
+From https://repo.anaconda.com/archive/
+Specifically - https://repo.anaconda.com/archive/Anaconda2-2019.10-Windows-x86_64.exe
+
+
+2. IntelliJ Community Edition
+
+https://download.jetbrains.com/idea/ideaIC-2020.2.2.exe
+
+### 2. Peripheral Hadoop Libraries
 
 # Windows setup
 
 Setup path variables
 ```
-setx HADOOP_HOME PATH
-setx SPARK_HOME PATH
-setx JAVA_HOME PATH
+setx HADOOP_HOME %CD%\hadoop-2.7.6
+setx SPARK_HOME %CD%\spark-2.4.6-bin-hadoop2.7
+
+REM This stop may not work if user does not have elevated access
+REM Recommended then to install JDK within user's own userspace and then point JAVA_HOME to it
+
+setx JAVA_HOME "C:\Program Files\Java\jre1.8.0_181"
 ```
