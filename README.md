@@ -1,9 +1,9 @@
 # Running a localized Hadoop environment with a Python pipeline
 winutils.exe hadoop.dll and hdfs.dll binaries for hadoop on windows
 
-## Instructions
+# Instructions
 
-### 1. Base installation packages
+## 1. Base installation packages
 
 1. Python runtime environment
 
@@ -15,9 +15,9 @@ Specifically - https://repo.anaconda.com/archive/Anaconda2-2019.10-Windows-x86_6
 
 https://download.jetbrains.com/idea/ideaIC-2020.2.2.exe
 
-### 2. Peripheral Hadoop Libraries
+## 2. Peripheral Hadoop Libraries
 
-# Windows setup
+### Windows setup
 
 Setup path variables
 ```
