@@ -19,7 +19,7 @@ https://download.jetbrains.com/idea/ideaIC-2020.2.2.exe
 
 ### Windows setup
 
-Setup path variables
+Setup path variables - do this on the basepath of this repo
 ```
 setx HADOOP_HOME %CD%\hadoop-2.7.6
 setx SPARK_HOME %CD%\spark-2.4.6-bin-hadoop2.7
