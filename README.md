@@ -15,9 +15,29 @@ Specifically - https://repo.anaconda.com/archive/Anaconda2-2019.10-Windows-x86_6
 
 https://download.jetbrains.com/idea/ideaIC-2020.2.2.exe
 
-## 2. Peripheral Hadoop Libraries
+3. JDK
 
-### Windows setup
+Download
+https://portapps.io/app/oracle-jdk-portable/#download
+
+And make sure to install to
+
+```
+C:\Users\%USERNAME%\dev\jdk
+```
+
+If path doesn't exist then run
+
+```
+mkdir C:\Users\%USERNAME%\dev
+mkdir C:\Users\%USERNAME%\dev\jdk
+```
+
+4. Hadoop Libraries
+
+This is part of the git repository - no need to source externally
+
+### Configuration setup
 
 Setup path variables - do this on the basepath of this repo
 ```
