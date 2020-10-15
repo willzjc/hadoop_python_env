@@ -47,5 +47,17 @@ setx SPARK_HOME %CD%\spark-2.4.6-bin-hadoop2.7
 REM This stop may not work if user does not have elevated access
 REM Recommended then to install JDK within user's own userspace and then point JAVA_HOME to it
 
-setx JAVA_HOME "C:\Program Files\Java\jre1.8.0_181"
+setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_181"
+
+REM or if you are using the portable version of JDK...
+
+setx JAVA_HOME C:\Users\%USERNAME%\dev\jdk\app
 ```
+
+Alternatively - this can be done via a GUI
+
+```
+rundll32 sysdm.cpl,EditEnvironmentVariables
+```
+
+This will bring up a GUI that sets the variables above in the userspace (top pane)
