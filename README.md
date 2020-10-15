@@ -61,3 +61,5 @@ rundll32 sysdm.cpl,EditEnvironmentVariables
 ```
 
 This will bring up a GUI that sets the variables above in the userspace (top pane)
+
+![env vars](envvar.png)
