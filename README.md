@@ -3,7 +3,7 @@ winutils.exe hadoop.dll and hdfs.dll binaries for hadoop on windows
 
 # Instructions
 
-## 1. Base installation packages
+## Base installation packages
 
 1. Python runtime environment
 
@@ -37,7 +37,7 @@ mkdir C:\Users\%USERNAME%\dev\jdk
 
 This is part of the git repository - no need to source externally
 
-### Configuration setup
+## Configuration setup
 
 Setup path variables - do this on the basepath of this repo
 ```
